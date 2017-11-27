@@ -12,6 +12,17 @@
     border-width: 1px;
 }
 
+#stars{
+    color: gray;
+    font-size: 20pt;
+    user-select: none;
+    cursor: pointer;
+}
+
+.filledStar{
+    color: gold;
+}
+
 #movieReview{
     display: flex;
     flex-direction: row;
