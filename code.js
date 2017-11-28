@@ -2,29 +2,13 @@ let movieData = require("./data").movieData; // Import data.js
 let $ = require("jquery"); // Import jQuery
 
 function renderMovieReview(movieData){
-    let mainDiv = document.querySelector("main");
+    let movieImg = document.querySelector("#movieImg > img");
+    movieImg.setAttribute("src", movieData.imgUrl);
+    movieImg.setAttribute("alt", movieData.title);
 
-    // Create Movie review HTML Sceleton
-    mainDiv.innerHTML = "<div id=\"movieReviewContainer\">" +
-                            "<div id=\"movieReview\"></div>" +
-                        "</div>";
-
-    let movieReview = document.querySelector("#movieReview");
-    movieReview.innerHTML = "<div id=\"movieImg\">" +
-                                "<img src=\"" + movieData.imgUrl + "\" alt=\"" + movieData.title + "\"/>" +
-                            "</div>" +
-                            "<div id=\"movieDesc\">" +
-                                "<h1>" + movieData.title + "</h1>" +
-                                "<div id=\"stars\">" +
-                                    "<span id=\"star1\">&#9733;</span>" +
-                                    "<span id=\"star2\">&#9733;</span>" +
-                                    "<span id=\"star3\">&#9733;</span>" +
-                                    "<span id=\"star4\">&#9733;</span>" +
-                                    "<span id=\"star5\">&#9733;</span>" +
-                                "</div>" +
-                                "<p>" + movieData.description +"</p>" +
-                                "<ul id=\"actorsList\"></ul>" +
-                            "</div>";
+    let movieDesc = document.querySelector("#movieDesc");
+    movieDesc.querySelector("h1").innerHTML = movieData.title;
+    movieDesc.querySelector("p").innerHTML = movieData.description;
     
     let actorsList = document.querySelector("#actorsList");
     for(let i = 0; i < movieData.actors.length; i++){
