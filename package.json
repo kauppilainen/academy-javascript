@@ -1,0 +1,34 @@
+{
+  "name": "academy-javascript",
+  "version": "1.0.0",
+  "main": "code.js",
+  "scripts": {
+    "styles": "lessc style.less distribution/style.css",
+    "bundle": "webpack",
+    "copyindex": "cp template.html distribution/index.html",
+    "lintless": "stylelint style.less",
+    "lintjs": "eslint .",
+    "lint": "npm run lintless && npm run lintjs",
+    "build": "npm run styles && npm run lint && npm run bundle && npm run copyindex"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kauppilainen/academy-javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kauppilainen/academy-javascript/issues"
+  },
+  "homepage": "https://github.com/kauppilainen/academy-javascript#readme",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "less": "^2.7.3",
+    "stylelint": "^8.3.1",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

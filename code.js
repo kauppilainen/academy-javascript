@@ -1,4 +1,5 @@
-
+let movieData = require("./data").movieData; // Import data.js
+let $ = require("jquery"); // Import jQuery
 
 function renderMovieReview(movieData){
     let mainDiv = document.querySelector("main");
@@ -22,9 +23,7 @@ function renderMovieReview(movieData){
                                     "<span id=\"star5\">&#9733;</span>" +
                                 "</div>" +
                                 "<p>" + movieData.description +"</p>" +
-                                "<ul id=\"actorsList\">" +
-                            
-                                "</ul>" +
+                                "<ul id=\"actorsList\"></ul>" +
                             "</div>";
     
     let actorsList = document.querySelector("#actorsList");
