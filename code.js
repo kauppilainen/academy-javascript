@@ -1,5 +1,4 @@
 let movieData = require("./data").movieData; // Import data.js
-let $ = require("jquery"); // Import jQuery
 
 function renderMovieReview(movieData){
     let movieImg = document.querySelector("#movieImg > img");
